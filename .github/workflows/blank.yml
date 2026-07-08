@@ -1,8 +1,9 @@
-name: My first GHA workflow
+name: My first GHA
 on: workflow_dispatch
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo first task
-        run: echo "welcome to first GHA"
+      - name: Echo
+        run: echo "welcome to GHA"
+      
