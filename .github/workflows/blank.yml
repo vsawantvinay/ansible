@@ -1,8 +1,8 @@
-name: test gha
+name: Practice GHA
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: echo
-        run: echo "welcome"
+        run: echo " Test on VM"
