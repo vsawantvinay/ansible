@@ -1,9 +1,9 @@
-name: My first GHA
+name: Test GHA
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: echo "welcome to GHA"
-      
+      - name: echo test
+        run: echo "wlcome"
+        
