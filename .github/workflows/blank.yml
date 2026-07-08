@@ -1,0 +1,8 @@
+name: My first GHA workflow
+on: workflow_dispatch
+jobs:
+  Build:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Echo first task
+      run: echo "welcome to first GHA"cancel-timeout-minutes: 
