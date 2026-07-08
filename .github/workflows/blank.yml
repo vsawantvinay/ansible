@@ -4,15 +4,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Phase
+      - name: Build
         run: echo "Build"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test phase
-        run: echo "Test Phase"
+      - name: Test
+        run: echo "Test"
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy phase
-        run: echo "Deploy"
+      - name: deplpy
+        run: echo "deploy"
