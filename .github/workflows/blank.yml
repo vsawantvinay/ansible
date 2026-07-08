@@ -1,18 +1,18 @@
-name: my GHA steps
+name: Test GHA
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: echo "build"
+        run: echo " This is build"
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo "Test"
+        run: echo " This is test stage"
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: deploy
-        run: echo "Deploy"
+        run: echo " this is deploy stage"
