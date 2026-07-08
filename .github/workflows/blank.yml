@@ -1,11 +1,11 @@
-name: Test all phase
+name: my GHA steps
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: echo "Build"
+        run: echo "build"
   test:
     runs-on: ubuntu-latest
     steps:
@@ -14,5 +14,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: deplpy
-        run: echo "deploy"
+      - name: deploy
+        run: echo "Deploy"
