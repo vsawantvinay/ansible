@@ -1,18 +1,18 @@
-name: Build ALl task
+name: Test all phase
 on: workflow_dispatch
 jobs:
-  buid:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
-        run: echo " Buid Stage"
+      - name: Build Phase
+        run: echo "Build"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: echo Test
-        run: echo "Test stage"
+      - name: Test phase
+        run: echo "Test Phase"
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: echo deplo
-        run: echo "deploy stage"
+      - name: Deploy phase
+        run: echo "Deploy"
