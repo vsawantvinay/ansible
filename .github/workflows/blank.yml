@@ -1,10 +1,10 @@
-name: Practice GHA
+name: Hello world
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
+      - name: echo test
         run: |
           echo "One line"
-          echo "Two Line"
+          echo  "Two Line"
