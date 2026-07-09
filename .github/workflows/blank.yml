@@ -13,3 +13,8 @@ jobs:
     steps:
       - name: build step
         run: echo "Build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "Test"
