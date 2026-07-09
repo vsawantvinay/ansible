@@ -15,6 +15,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: dispaly env:
+      - name: dispaly env
         run: echo " you are runing job on ${{inputs.environment}}"
         
