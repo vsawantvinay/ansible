@@ -7,3 +7,8 @@ jobs:
     steps:
       - name: Variable practice
         run: echo "Hello ${{ vars.MY_NAME }} how are you"
+  secret_practice:
+    runs-on: ubuntu-slim
+    steps:
+      - name: secrete_practice
+        run: echo "Docker secrets are ${{ secrets.KEY_NAME }}
