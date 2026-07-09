@@ -6,6 +6,10 @@ on:
         description: Choose env
         required: true
         default: dev
+        options:
+          - dev
+          - test
+          - prod
 jobs:
   deploy:
     runs-on: ubuntu-latest
