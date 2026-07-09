@@ -17,4 +17,4 @@ jobs:
         run: printenv | sort
 
       - name: Pring github sha 
-        run: echo sha value is ${{ GITHUB_SHA }}
+        run: echo sha value is $GITHUB_SHA
