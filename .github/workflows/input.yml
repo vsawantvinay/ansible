@@ -6,10 +6,8 @@ on:
         description: select env
         required: true
         default: dev
-        options:
-          - dev
-          - qa
-          - test
+        type: choice
+        options: [dev,qa,stage,prod]
 jobs:
   deploy:
     runs-on: ubuntu-latest
