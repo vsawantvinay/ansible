@@ -1,17 +1,15 @@
-name: Testing on input
+name: testing on choice
 on: 
   workflow_dispatch:
     inputs:
-      environment:
-        description: Choose env
+      environments:
+        description: choose env
         required: true
-        default: dev
-        options:
         type: choice
         options: [dev,qa,prod]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: testing on input
-        run: echo "you are running jobs on ${{ inputs.environment}}"
+      - name: stage1
+        run: echo "you are running job in ${{ inputs.environments }}"
