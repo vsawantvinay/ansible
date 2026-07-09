@@ -7,9 +7,8 @@ on:
         required: true
         default: dev
         options:
-          - dev
-          - test
-          - prod
+        type: choice
+        options: [dev,qa,prod]
 jobs:
   deploy:
     runs-on: ubuntu-latest
