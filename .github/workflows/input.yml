@@ -1,0 +1,14 @@
+name: Testing on input
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Choose env
+        required: true
+        default: dev
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing on input
+        run: echo " youare running jobs on ${{ inputs.environment}}
