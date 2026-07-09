@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing on input
-        run: echo " youare running jobs on ${{ inputs.environment}}
+        run: echo "you are running jobs on ${{ inputs.environment}}"
