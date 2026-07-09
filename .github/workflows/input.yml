@@ -1,20 +1,18 @@
-name: GHA input testing
+name: GHA input section
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: choose env
+      environement:
+        description: select env
         required: true
-        type: choice
+        default: dev
         options:
           - dev
           - qa
-          - prod
           - test
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: dispaly env
-        run: echo " you are runing job on ${{inputs.environment}}"
-        
+      - name: test
+        run: echo "you are using env as ${{ inputs.environement }}"
