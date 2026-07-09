@@ -1,0 +1,9 @@
+name: Practice on variable
+on:
+  workflow_dispatch: 
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Variable practice
+        run: echo "Hello ${{ vars.MY_NAME }} how are you"
