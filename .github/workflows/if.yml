@@ -1,0 +1,12 @@
+name: Testing if condition
+on:
+  pull_request: 
+   types: 
+     - opened
+     - synchronize
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build 
+        run: echo "buildilng the applicatoin"
