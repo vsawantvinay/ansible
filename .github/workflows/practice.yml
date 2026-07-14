@@ -1,13 +1,15 @@
-name: new practice session on GHA
+name: Practice on context workflow
 on:
   push:
     branches:
       - main
 jobs:
-  Build:
-    runs-on: ubuntu-slim
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: Git check out
-        uses: actions/checkout@v7
-      - name: cat the file
-        run: cat test.txt
+      - name: echo statement
+        run: |
+            echo "This workflow is being ran by user ${{ github.actor }}
+            echo " This repository is ${{ github.repository }}
+            echo " This repo's branch is ${{ github.ref_name }}
+        
