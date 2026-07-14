@@ -27,4 +27,7 @@ jobs:
 
       - name: print all github variables
         run: echo "${{ toJson(github) }}"
+
+      - name: print all github vairbles
+        run: printenv | sort
       
