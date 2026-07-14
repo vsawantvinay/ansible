@@ -32,5 +32,5 @@ jobs:
         run: printenv | sortGITHUB_SHA
 
       - name: print gitsha
-        run: echo $GITHUB_SHA
+        run: echo sha value is $GITHUB_SHA
       
