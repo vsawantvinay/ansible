@@ -7,23 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: echo "this is build test"
-  Run:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Run test
-        run: echo " This is run test"
-  deploy:
-    runs-on: ubuntu-latest
-    needs: Run
-    steps:
-      - name: Final stage
-        run: echo " This is final stage "
-  git:
-    runs-on: ubuntu-slim
-    steps:
       - name: git checkout
         uses: actions/checkout@v7
+      - name: cat file
         run: cat test.txt
