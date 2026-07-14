@@ -1,14 +1,12 @@
-name: varable practice on GHA
-on:
-  workflow_dispatch:
+name: if codition in GHA
+on: 
+  pull_request:
+    types: 
+      - opened
+      - synchronize
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: dispaly varaibels
-        run: echo "Hello how are you ${{ vars.MY_NAME }}"
-  secret:
-    runs-on: ubuntu-latest
-    steps:
-      - name: deispay secret
-        run: echo "my key details are ${{ secrets.KEY_NAME }}"
+      - name: build
+        run: echo "Buildling application"
