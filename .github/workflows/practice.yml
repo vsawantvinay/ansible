@@ -1,20 +1,20 @@
-name: GHA input practice
+name: input practice
 on:
   workflow_dispatch:
     inputs:
       environments:
-        description: 
+        description: choose env
         required: true
-        default: dev
         type: choice
         options:
           - dev
           - qa
           - test
-          - prod
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: echo env
-        run: echo "workflow is running on ${{ inputs.environments }}"
+      - name: echo
+        run: |
+          set -x
+          echo "workflow is running on evn ${{ inputs.environments }}"
