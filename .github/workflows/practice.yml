@@ -1,15 +1,25 @@
-name: Practice on context workflow
-on:
-  push:
-    branches:
-      - main
+name: Full Practice
+on: workflow_dispatch
 jobs:
-  build:
+  echo:
+    runs-on: ubuntu-slim
+    steps:
+      - name: echo default GHA variables
+        run: |
+            echo "This workflow is ran by user ${{ github.actor }}"
+            echo "this repo is ${{ github.repository }}"
+            echo "This repos brnach is ${{ github.ref_name }}"
+  Git:
+    runs-on: ubuntu-latest
+    needs: echo
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v7
+      - name: cat file
+        run: cat test.txt
+  Finale:
     runs-on: ubuntu-latest
     steps:
-      - name: echo statement
-        run: |
-            echo "This workflow is being ran by user ${{ github.actor }}"
-            echo " This repository is ${{ github.repository }}"
-            echo " This repo's branch is ${{ github.ref_name }}"
-        
+      - name: echo final stage
+        run: echo " All stage successful"
+      
