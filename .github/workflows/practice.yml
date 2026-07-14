@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: echo statement
         run: |
-            echo "This workflow is being ran by user ${{ github.actor }}
-            echo " This repository is ${{ github.repository }}
-            echo " This repo's branch is ${{ github.ref_name }}
+            echo "This workflow is being ran by user ${{ github.actor }}"
+            echo " This repository is ${{ github.repository }}"
+            echo " This repo's branch is ${{ github.ref_name }}"
         
