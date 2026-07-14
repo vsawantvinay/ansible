@@ -1,20 +1,14 @@
-name: input practice
+name: varable practice on GHA
 on:
   workflow_dispatch:
-    inputs:
-      environments:
-        description: choose env
-        required: true
-        type: choice
-        options:
-          - dev
-          - qa
-          - test
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
-        run: |
-          set -x
-          echo "workflow is running on evn ${{ inputs.environments }}"
+      - name: dispaly varaibels
+        run: echo "Hello how are you ${{ vars.MY_NAME }}"
+  secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deispay secret
+        run: echo "my key details are ${{ secrets.KEY_NAME }}"
