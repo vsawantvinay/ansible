@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: echo final stage
         run: echo " All stage successful"
-      - name: print all default variables
-        run: echo ${{ toJson(github) }}"
+
+      - name: print all github variables
+        run: echo "${{ toJson(github) }}"
       
