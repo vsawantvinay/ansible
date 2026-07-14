@@ -1,8 +1,16 @@
 name: practice on GHA
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: build
         run: echo "this is build test"
+  Run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run test
+        run: echo " This is run test"
