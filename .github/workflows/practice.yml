@@ -29,5 +29,8 @@ jobs:
         run: echo "${{ toJson(github) }}"
 
       - name: print all github vairbles
-        run: printenv | sort
+        run: printenv | sortGITHUB_SHA
+
+      - name: print gitsha
+        run: echo $GITHUB_SHA
       
