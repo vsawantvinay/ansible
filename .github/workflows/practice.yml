@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo env
-        run: echo "workflow is running on ${{ inputs.environments }}
+        run: echo "workflow is running on ${{ inputs.environments }}"
