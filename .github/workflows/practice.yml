@@ -1,13 +1,13 @@
-name: practice on GHA
-on: 
+name: new practice session on GHA
+on:
   push:
     branches:
       - main
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  Build:
+    runs-on: ubuntu-slim
     steps:
-      - name: git checkout
+      - name: Git check out
         uses: actions/checkout@v7
-      - name: cat file
+      - name: cat the file
         run: cat test.txt
