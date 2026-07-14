@@ -21,3 +21,9 @@ jobs:
     steps:
       - name: Final stage
         run: echo " This is final stage "
+  git:
+    runs-on: ubuntu-slim
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v7
+        run: cat test.txt
