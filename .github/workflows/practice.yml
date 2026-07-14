@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: echo default GHA variables
         run: |
-            set +X
+            set +x
             echo "This workflow is ran by user ${{ github.actor }}"
             echo "this repo is ${{ github.repository }}"
             echo "This repos brnach is ${{ github.ref_name }}"
