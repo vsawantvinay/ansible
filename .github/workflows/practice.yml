@@ -1,12 +1,21 @@
-name: if codition in GHA
-on: 
+name: pull/push if condition 
+on:
+  push:
+    branches:
+      - main
   pull_request:
     types: 
       - opened
-      - synchronize
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
-      - name: build
-        run: echo "Buildling application"
+      - name: Run build stage
+        run: echo "job is triggered due to pull request"
+  deploy:
+    runs-on: windows-latest
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    steps:
+      - name: Deoloy stage
+        run: echo "Jpb is triggered due to push"
